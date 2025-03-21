@@ -12,6 +12,7 @@ public class BankAccount {
     public void deposit(double amount) {
         if (amount > 0) {
             this.balance += amount;
+            System.out.println("Deposited " + amount + " to the account " + accountID);
         } else {
             System.out.println("Deposit amount must be greater than $0");
         }
@@ -20,10 +21,11 @@ public class BankAccount {
     public void withdrawal(double amount) {
         if (amount > 0) {
             this.balance -= amount;
-            System.out.println("You are withdrawing: $" + amount);
+            System.out.println("You are withdrawing: $" + amount + " from the account " + accountID);
         } else {
             System.out.println("Withdrawal amount must be greater than $0");
         }
+
     }
 
     public String getFirstName() {
@@ -52,6 +54,10 @@ public class BankAccount {
 
     public double getBalance() {
         return balance;
+    }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
     }
 
     public void accountSummary() {
