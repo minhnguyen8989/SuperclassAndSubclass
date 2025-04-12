@@ -14,7 +14,7 @@ public class BankAccount {
             this.balance += amount;
             System.out.println("Deposited " + amount + " to the account " + accountID);
         } else {
-            System.out.println("Deposit amount must be greater than $0");
+            throw new IllegalArgumentException("Deposit amount must be greater than $0.");
         }
     }
 
@@ -23,7 +23,7 @@ public class BankAccount {
             this.balance -= amount;
             System.out.println("You are withdrawing: $" + amount + " from the account " + accountID);
         } else {
-            System.out.println("Withdrawal amount must be greater than $0");
+            throw new IllegalArgumentException("Withdrawal amount must be greater than $0.");
         }
 
     }

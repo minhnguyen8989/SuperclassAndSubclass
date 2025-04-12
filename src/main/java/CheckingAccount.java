@@ -4,7 +4,7 @@ public class CheckingAccount extends BankAccount {
 
     public CheckingAccount() {
         super();
-        this.interestRate = 0.05; //5% interest rate for checking account
+        this.interestRate = 0.05;
     }
 
     public void processWithdrawal() {
