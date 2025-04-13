@@ -9,6 +9,12 @@ public class BankAccount {
         this.balance = 0.0;
     }
 
+    /**
+     * Deposits a specified amount into the bank account.
+     *
+     * @param amount The amount to deposit. It must be greater than 0.
+     * @throws IllegalArgumentException if the deposit amount is less than or equal to 0.
+     */
     public void deposit(double amount) {
         if (amount > 0) {
             this.balance += amount;
@@ -18,6 +24,13 @@ public class BankAccount {
         }
     }
 
+    /**
+     * Withdraws a specified amount from the bank account.
+     *
+     * @param amount The amount to withdraw. It must be greater than 0.
+     * @throws IllegalArgumentException if the withdrawal amount is less than or equal to 0,
+     *                                  or if there are insufficient funds in the account.
+     */
     public void withdrawal(double amount) {
         if (amount > 0) {
             this.balance -= amount;
@@ -60,6 +73,9 @@ public class BankAccount {
         this.balance = balance;
     }
 
+    /**
+     * Prints a summary of the account, including account holder information, account ID, and current balance.
+     */
     public void accountSummary() {
         System.out.println("Account holder first name: " + firstName);
         System.out.println("Account holder last name: " + lastName);
